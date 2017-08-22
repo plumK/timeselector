@@ -11,13 +11,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
 import com.lee.timeselector.R;
 import com.lee.timeselector.inter.OnDismissListener;
-import com.lee.timeselector.util.PickerViewAnimateUtil;
 
 /**
  * Created by Administrator on 2017/8/20 0020.
@@ -25,12 +22,7 @@ import com.lee.timeselector.util.PickerViewAnimateUtil;
 
 public class BasePickerView {
 
-    protected int pickerview_timebtn_nor = 0xFF057dff;
-    protected int pickerview_timebtn_pre = 0xFFc2daf5;
-    protected int pickerview_bg_topbar = 0xFFf5f5f5;
-    protected int pickerview_topbar_title = 0xFF000000;
     protected int bgColor_default = 0xFFFFFFFF;
-
 
     private boolean dismissing;
     private boolean isShowing;
@@ -105,7 +97,6 @@ public class BasePickerView {
             if (backgroudId != 0) {
                 rootView.setBackgroundColor(backgroudId);
             }
-            // rootView.setBackgroundColor(ContextCompat.getColor(context,backgroudId));
             //这个是真正要加载时间选取器的父布局
             contentContainer = (ViewGroup) rootView.findViewById(R.id.content_container);
             contentContainer.setLayoutParams(params);
@@ -224,7 +215,6 @@ public class BasePickerView {
                 view.setOnTouchListener(null);
             }
         }
-
         return this;
     }
 

@@ -358,7 +358,7 @@ public class WheelTime {
     private void setReDay(int year_num, int monthNum, int startD, int endD, List<String> list_big, List<String> list_little) {
         int currentItem = wv_day.getCurrentItem();
 
-       final int maxItem;
+        final int maxItem;
         if (list_big
                 .contains(String.valueOf(monthNum))) {
             if (endD > 31) {

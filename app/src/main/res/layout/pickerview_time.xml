@@ -4,13 +4,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <include
-        layout="@layout/include_pickerview_topbar"
-        android:layout_width="match_parent"
-        android:layout_height="44dp" />
+    <!--<include-->
+    <!--layout="@layout/include_pickerview_topbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="44dp" />-->
 
     <LinearLayout
-        android:id="@+id/timepicker"
+        android:id="@+id/timepickerS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"

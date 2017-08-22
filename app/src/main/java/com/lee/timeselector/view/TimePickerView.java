@@ -140,41 +140,42 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         setDialogOutSideCancelable(cancelable);
         initViews(backgroundId);
         initEvents();
-        if (customListener == null) {
-            LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
+//        if (customListener == null) {
+//            LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
 
-            //顶部标题
-            tvTitle = (TextView) findViewById(R.id.tvTitle);
+        //顶部标题
+//            tvTitle = (TextView) findViewById(R.id.tvTitle);
 
-            //确定和取消按钮
-            btnSubmit = (Button) findViewById(R.id.btnSubmit);
-            btnCancel = (Button) findViewById(R.id.btnCancel);
+        //确定和取消按钮
+//            btnSubmit = (Button) findViewById(R.id.btnSubmit);
+//            btnCancel = (Button) findViewById(R.id.btnCancel);
 
-            btnSubmit.setTag(TAG_SUBMIT);
-            btnCancel.setTag(TAG_CANCEL);
+//            btnSubmit.setTag(TAG_SUBMIT);
+//            btnCancel.setTag(TAG_CANCEL);
 
-            btnSubmit.setOnClickListener(this);
-            btnCancel.setOnClickListener(this);
+//            btnSubmit.setOnClickListener(this);
+//            btnCancel.setOnClickListener(this);
 
-            //设置文字
-            btnSubmit.setText(TextUtils.isEmpty(Str_Submit) ? context.getResources().getString(R.string.pickerview_submit) : Str_Submit);
-            btnCancel.setText(TextUtils.isEmpty(Str_Cancel) ? context.getResources().getString(R.string.pickerview_cancel) : Str_Cancel);
-            tvTitle.setText(TextUtils.isEmpty(Str_Title) ? "" : Str_Title);//默认为空
+        //设置文字
+//            btnSubmit.setText(TextUtils.isEmpty(Str_Submit) ? context.getResources().getString(R.string.pickerview_submit) : Str_Submit);
+//            btnCancel.setText(TextUtils.isEmpty(Str_Cancel) ? context.getResources().getString(R.string.pickerview_cancel) : Str_Cancel);
+//            tvTitle.setText(TextUtils.isEmpty(Str_Title) ? "" : Str_Title);//默认为空
 
-            //设置文字颜色
-            btnSubmit.setTextColor(Color_Submit == 0 ? pickerview_timebtn_nor : Color_Submit);
-            btnCancel.setTextColor(Color_Cancel == 0 ? pickerview_timebtn_nor : Color_Cancel);
-            tvTitle.setTextColor(Color_Title == 0 ? pickerview_topbar_title : Color_Title);
+        //设置文字颜色
+//            btnSubmit.setTextColor(Color_Submit == 0 ? pickerview_timebtn_nor : Color_Submit);
+//            btnCancel.setTextColor(Color_Cancel == 0 ? pickerview_timebtn_nor : Color_Cancel);
+//            tvTitle.setTextColor(Color_Title == 0 ? pickerview_topbar_title : Color_Title);
 
-            //设置文字大小
-            btnSubmit.setTextSize(Size_Submit_Cancel);
-            btnCancel.setTextSize(Size_Submit_Cancel);
-            tvTitle.setTextSize(Size_Title);
-            RelativeLayout rv_top_bar = (RelativeLayout) findViewById(R.id.rv_topbar);
-            rv_top_bar.setBackgroundColor(Color_Background_Title == 0 ? pickerview_bg_topbar : Color_Background_Title);
-        } else {
-            customListener.customLayout(LayoutInflater.from(context).inflate(layoutRes, contentContainer));
-        }
+        //设置文字大小
+//            btnSubmit.setTextSize(Size_Submit_Cancel);
+//            btnCancel.setTextSize(Size_Submit_Cancel);
+//            tvTitle.setTextSize(Size_Title);
+//            RelativeLayout rv_top_bar = (RelativeLayout) findViewById(R.id.rv_topbar);
+//            rv_top_bar.setBackgroundColor(Color_Background_Title == 0 ? pickerview_bg_topbar : Color_Background_Title);
+//        } else {
+//
+//        }
+        customListener.customLayout(LayoutInflater.from(context).inflate(layoutRes, contentContainer));
         // 时间转轮 自定义控件
         LinearLayout timePickerView = (LinearLayout) findViewById(R.id.timepicker);
 
@@ -438,7 +439,6 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             this.dividerColor = dividerColor;
             return this;
         }
-
 
 
         public Builder isCenterLabel(boolean isCenterLabel) {

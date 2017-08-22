@@ -742,7 +742,6 @@ public class WheelView extends View {
     }
 
 
-
     public void setTextColorOut(int textColorOut) {
         if (textColorOut != 0) {
             this.textColorOut = textColorOut;
